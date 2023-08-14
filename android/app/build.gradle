@@ -54,6 +54,15 @@ android {
         versionName flutterVersionName
     }
 
+    signingConfigs {
+        release {
+            keyAlias 'your_key_alias'
+            keyPassword 'flutter'
+            storeFile file('/home/ec2-user/my-release-key.keystore')
+            storePassword 'flutter'
+        }
+    }
+
     buildTypes {
         release {
             // TODO: Add your own signing config for the release build.
